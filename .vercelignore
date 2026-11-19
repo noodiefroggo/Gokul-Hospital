@@ -1,0 +1,12 @@
+# Only the six pages and their assets are deployed:
+# /  /Home-V1  /Home-V2  /brand  /logo  /ads
+proposal
+ads/_build
+ads/0*.html
+ads/ad-copy.md
+logo/_src
+logo/_preview.html
+BRAND_BRIEF.md
+README.md
+.env*
+brand/_src

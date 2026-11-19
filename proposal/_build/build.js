@@ -34,13 +34,18 @@ for (const [key, file] of Object.entries(map)) {
     return out;
   });
 }
-fs.writeFileSync(path.join(root, 'proposal', 'index.html'), html);
-console.log('wrote proposal/index.html', html.length, 'bytes,', n, 'logos inlined');
+// Claude artifact copy: page links point at the live Vercel site.
+const LIVE = 'https://gokul-hospital-two.vercel.app/';
+const artifact = html
+  .replace(/href="(Home-V1|Home-V2|logo|brand|ads)"/g, `href="${LIVE}$1"`)
+  .replace(/href:'(Home-V1|Home-V2)'/g, `href:'${LIVE}$1'`);
+fs.writeFileSync(path.join(root, 'proposal', 'index.html'), artifact);
+console.log('wrote proposal/index.html', artifact.length, 'bytes,', n, 'logos inlined');
 
 // Site root (GitHub / Vercel): full document, paths rewritten to the repo layout.
 let site = html
-  .replace(/src="shots\//g, 'src="proposal/shots/')
-  .replace(/'shots\//g, "'proposal/shots/")
+  .replace(/src="shots\//g, 'src="assets/shots/')
+  .replace(/'shots\//g, "'assets/shots/")
   .replace(/src="ads\/(\d\d-[^"]+\.png)"/g, 'src="ads/png/$1"');
 const titleEnd = site.indexOf('</title>') + '</title>'.length;
 site = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'

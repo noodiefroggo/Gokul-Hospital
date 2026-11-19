@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/home/brand", "destination": "/Home-V1", "permanent": true },
+    { "source": "/home/dark", "destination": "/Home-V2", "permanent": true },
+    { "source": "/home-v1", "destination": "/Home-V1", "permanent": true },
+    { "source": "/home-v2", "destination": "/Home-V2", "permanent": true },
+    { "source": "/proposal", "destination": "/", "permanent": true }
+  ]
+}
