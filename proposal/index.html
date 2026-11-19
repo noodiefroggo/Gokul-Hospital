@@ -173,13 +173,50 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
 @media (prefers-reduced-motion:no-preference){
   .viewport img{transition:opacity .45s ease}
 }
+
+/* light band */
+.band-light{background:var(--cream-2)}
+.band-light .browser{box-shadow:0 30px 70px rgba(11,42,60,.22)}
+.band-light .phone{box-shadow:0 30px 60px rgba(11,42,60,.25)}
+.stage-rev{grid-template-columns:250px 1fr}
+.stage-foot{justify-content:flex-start}
+@media (max-width:860px){.stage-rev{grid-template-columns:1fr}.stage-rev .phone{order:2}}
+
+/* ad lightbox triggers */
+.ad-open{all:unset;display:block;cursor:zoom-in;border-radius:12px}
+.ad-open:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
+.ad-open img{transition:transform .3s ease,box-shadow .3s ease}
+.ad-open:hover img{transform:translateY(-3px);box-shadow:0 20px 40px rgba(11,42,60,.2)}
+dialog#lb{border:0;padding:0;background:transparent;max-width:min(92vw,980px);max-height:92vh;width:auto;overflow:visible}
+dialog#lb::backdrop{background:rgba(7,28,40,.86);backdrop-filter:blur(6px)}
+.lb-in{display:grid;gap:12px;justify-items:center}
+#lb-img{max-width:min(92vw,980px);max-height:calc(92vh - 64px);width:auto;height:auto;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5);display:block}
+.lb-bar{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;color:#E6E0D2;font-size:.9rem}
+#lb-cap{display:flex;gap:12px}
+#lb-cap b{color:var(--gold-soft)}
+.lb-nav{display:flex;gap:8px}
+.lb-nav button{font:600 1rem var(--f-body);width:42px;height:42px;border-radius:50%;border:1px solid rgba(230,207,143,.4);background:rgba(255,255,255,.06);color:#FBF7EF;cursor:pointer}
+.lb-nav button:hover{background:rgba(230,207,143,.18)}
+.lb-nav button:focus-visible{outline:2px solid var(--gold-soft);outline-offset:2px}
+
+/* growth */
+.growth{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;display:grid;gap:14px;align-content:start}
+.g-ic{width:44px;height:44px;border-radius:12px;background:var(--navy);display:grid;place-items:center}
+.g-ic svg{width:22px;height:22px;fill:none;stroke:var(--gold-soft);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.g-card ul{margin:0;padding-left:1.1em;display:grid;gap:7px;font-size:.95rem}
+.g-card li::marker{color:var(--gold)}
+.kw{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px}
+.kw small{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-ink);margin-right:6px}
+.kw span{font-size:.85rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--navy)}
+@media (max-width:960px){.growth{grid-template-columns:1fr}}
 </style>
 
 <header class="bar">
   <div class="wrap">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 116" role="img" focusable="false" aria-label="Gokul Hospital"><g transform="translate(-16 9) scale(1.07)"><g transform="translate(50 50) rotate(16) scale(0.92) translate(-50 -51.5)"><defs><linearGradient id="gp-g-1" x1="0" y1="4" x2="0" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0E4D64"/><stop offset=".55" stop-color="#1A8C8C"/><stop offset="1" stop-color="#1A8C8C"/></linearGradient><mask id="gp-m-1" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/></mask></defs><path d="M49.05 56L50.95 56L50.42 97.6Q50 99 49.58 97.6Z" fill="#0B2A3C"/><path d="M50 64.33Q39.25 55.52 28.5 51M50 64.33Q60.75 55.52 71.5 51M50 67.45Q40.45 59.61 30.89 55.6M50 67.45Q59.55 59.61 69.11 55.6M50 70.56Q41.64 63.71 33.28 60.2M50 70.56Q58.36 63.71 66.72 60.2M50 73.68Q42.84 67.81 35.68 64.8M50 73.68Q57.16 67.81 64.32 64.8M50 76.8Q44.03 71.91 38.07 69.4M50 76.8Q55.97 71.91 61.93 69.4M50 79.91Q45.23 76 40.46 74M50 79.91Q54.77 76 59.54 74M50 83.03Q46.43 80.1 42.85 78.6M50 83.03Q53.57 80.1 57.15 78.6M50 86.15Q47.62 84.2 45.24 83.2M50 86.15Q52.38 84.2 54.76 83.2M50 89.27Q48.82 88.3 47.64 87.8M50 89.27Q51.18 88.3 52.36 87.8" fill="none" stroke="url(#gp-g-1)" stroke-width="0.95" stroke-linecap="round"/><path d="M50 3C62.6 3 72 14 72 30C72 46 62.4 59.6 50 66C37.6 59.6 28 46 28 30C28 14 37.4 3 50 3Z" fill="url(#gp-g-1)" mask="url(#gp-m-1)"/><ellipse cx="50" cy="28.6" rx="14.6" ry="18" fill="#C9A24B"/><ellipse cx="50" cy="29.9" rx="11.5" ry="14.6" fill="#1A8C8C"/><ellipse cx="50" cy="31.7" rx="7" ry="9.5" fill="#0B2A3C"/></g></g><text class="gk" x="88" y="66" font-size="62" textLength="236" lengthAdjust="spacingAndGlyphs" fill="#0B2A3C">GOKUL</text><rect x="89" y="80" width="234" height="1" fill="#C9A24B"/><text class="hs" x="89.5" y="103" font-size="13.5" textLength="233" lengthAdjust="spacing" fill="#0E4D64">HOSPITAL</text></svg>
     <nav aria-label="Proposal sections">
-      <a href="#idea">The idea</a><a href="#identity">Identity</a><a href="#website">Website</a><a href="#social">Social &amp; ads</a><a href="#next">Next steps</a>
+      <a href="#identity">Identity</a><a href="#home-v1">Website</a><a href="#social">Social</a><a href="#growth">SEO &amp; growth</a><a href="#next">Next steps</a>
     </nav>
   </div>
 </header>
@@ -191,11 +228,11 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
         <p class="eyebrow">Brand &amp; website proposal</p>
         <h1 style="margin-top:22px">Care, like <em>a mother's.</em></h1>
         <p class="hindi" lang="hi">माँ जैसी देखभाल</p>
-        <p class="lede" style="margin-top:22px">A new identity, website and social presence for Gokul Hospital, Dwarka Mor. Built on what 500+ patients already say about you: caring staff, personal attention and honest bills.</p>
+        <p class="lede" style="margin-top:22px">A new identity, website and social presence for Gokul Hospital, Dwarka Mor.</p>
         <div class="meta">
           <div><b>Prepared for</b>Gokul Hospital, Dwarka Mor</div>
           <div><b>Date</b>November 2026</div>
-          <div><b>Includes</b>Logo · 2 home pages · 7 social creatives</div>
+          <div><b>Includes</b>Logo · 2 home pages · Social · SEO</div>
         </div>
       </div>
       <div class="cover-mark" aria-hidden="true">
@@ -205,33 +242,12 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
     </div>
   </section>
 
-  <section class="chapter" id="idea">
-    <div class="wrap">
-      <div class="chapter-head">
-        <p class="eyebrow">01 · The idea</p>
-        <h2>The name already tells the story.</h2>
-      </div>
-      <div class="idea">
-        <div class="story">
-          <p>Gokul is where Krishna grew up in Yashoda's care. For families in Delhi, the name already means a mother's love and protection, and nurturing a child into the world.</p>
-          <p>That fits a hospital known for maternity, gynaecology and fertility care. So the brand doesn't invent a new promise. It names the one patients already describe in their reviews.</p>
-          <p>Krishna appears only as a symbol: his peacock feather, the <i>mor pankh</i>. It's warm and recognisable, and it stays calm enough for a clinical setting.</p>
-        </div>
-        <div class="pillars">
-          <div class="pillar"><span class="ring" aria-hidden="true"></span><div><h3>Warm</h3><p>Cream, soft arches and a serif voice. It should feel like being looked after, not processed.</p></div></div>
-          <div class="pillar"><span class="ring" aria-hidden="true"></span><div><h3>Trusted</h3><p>4.8★ from 500+ ratings, open 24×7 since 2018. Proof sits up front on every page.</p></div></div>
-          <div class="pillar"><span class="ring" aria-hidden="true"></span><div><h3>Close by</h3><p>Opposite Metro Pillar 781, one tap to call or WhatsApp. Getting help should feel easy.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="chapter" id="identity">
     <div class="wrap">
       <div class="chapter-head">
-        <p class="eyebrow">02 · Identity</p>
+        <p class="eyebrow">01 · Identity</p>
         <h2>One feather, <em>held gently.</em></h2>
-        <p class="lede">A single peacock feather, leaning toward the name. Its eye of navy, teal and gold still reads as a 16px browser icon. GOKUL is set in a soft serif, with HOSPITAL spaced out beneath a gold rule.</p>
+        <p class="lede">Krishna's peacock feather, as a calm symbol. It still reads at favicon size.</p>
       </div>
       <div class="id-grid">
         <div class="tile t-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 116" role="img" focusable="false" aria-label="Gokul Hospital"><g transform="translate(-16 9) scale(1.07)"><g transform="translate(50 50) rotate(16) scale(0.92) translate(-50 -51.5)"><defs><linearGradient id="gp-g-2" x1="0" y1="4" x2="0" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0E4D64"/><stop offset=".55" stop-color="#1A8C8C"/><stop offset="1" stop-color="#1A8C8C"/></linearGradient><mask id="gp-m-2" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/></mask></defs><path d="M49.05 56L50.95 56L50.42 97.6Q50 99 49.58 97.6Z" fill="#0B2A3C"/><path d="M50 64.33Q39.25 55.52 28.5 51M50 64.33Q60.75 55.52 71.5 51M50 67.45Q40.45 59.61 30.89 55.6M50 67.45Q59.55 59.61 69.11 55.6M50 70.56Q41.64 63.71 33.28 60.2M50 70.56Q58.36 63.71 66.72 60.2M50 73.68Q42.84 67.81 35.68 64.8M50 73.68Q57.16 67.81 64.32 64.8M50 76.8Q44.03 71.91 38.07 69.4M50 76.8Q55.97 71.91 61.93 69.4M50 79.91Q45.23 76 40.46 74M50 79.91Q54.77 76 59.54 74M50 83.03Q46.43 80.1 42.85 78.6M50 83.03Q53.57 80.1 57.15 78.6M50 86.15Q47.62 84.2 45.24 83.2M50 86.15Q52.38 84.2 54.76 83.2M50 89.27Q48.82 88.3 47.64 87.8M50 89.27Q51.18 88.3 52.36 87.8" fill="none" stroke="url(#gp-g-2)" stroke-width="0.95" stroke-linecap="round"/><path d="M50 3C62.6 3 72 14 72 30C72 46 62.4 59.6 50 66C37.6 59.6 28 46 28 30C28 14 37.4 3 50 3Z" fill="url(#gp-g-2)" mask="url(#gp-m-2)"/><ellipse cx="50" cy="28.6" rx="14.6" ry="18" fill="#C9A24B"/><ellipse cx="50" cy="29.9" rx="11.5" ry="14.6" fill="#1A8C8C"/><ellipse cx="50" cy="31.7" rx="7" ry="9.5" fill="#0B2A3C"/></g></g><text class="gk" x="88" y="66" font-size="62" textLength="236" lengthAdjust="spacingAndGlyphs" fill="#0B2A3C">GOKUL</text><rect x="89" y="80" width="234" height="1" fill="#C9A24B"/><text class="hs" x="89.5" y="103" font-size="13.5" textLength="233" lengthAdjust="spacing" fill="#0E4D64">HOSPITAL</text></svg><span class="cap">Primary</span></div>
@@ -240,9 +256,9 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
         <div class="tile t-stack"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 262" role="img" focusable="false" aria-label="Gokul Hospital"><g transform="translate(79.8 5.5) scale(1.2)"><g transform="translate(50 50) rotate(16) scale(0.92) translate(-50 -51.5)"><defs><linearGradient id="gs-g-5" x1="0" y1="4" x2="0" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0E4D64"/><stop offset=".55" stop-color="#1A8C8C"/><stop offset="1" stop-color="#1A8C8C"/></linearGradient><mask id="gs-m-5" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/></mask></defs><path d="M49.05 56L50.95 56L50.42 97.6Q50 99 49.58 97.6Z" fill="#0B2A3C"/><path d="M50 64.33Q39.25 55.52 28.5 51M50 64.33Q60.75 55.52 71.5 51M50 67.45Q40.45 59.61 30.89 55.6M50 67.45Q59.55 59.61 69.11 55.6M50 70.56Q41.64 63.71 33.28 60.2M50 70.56Q58.36 63.71 66.72 60.2M50 73.68Q42.84 67.81 35.68 64.8M50 73.68Q57.16 67.81 64.32 64.8M50 76.8Q44.03 71.91 38.07 69.4M50 76.8Q55.97 71.91 61.93 69.4M50 79.91Q45.23 76 40.46 74M50 79.91Q54.77 76 59.54 74M50 83.03Q46.43 80.1 42.85 78.6M50 83.03Q53.57 80.1 57.15 78.6M50 86.15Q47.62 84.2 45.24 83.2M50 86.15Q52.38 84.2 54.76 83.2M50 89.27Q48.82 88.3 47.64 87.8M50 89.27Q51.18 88.3 52.36 87.8" fill="none" stroke="url(#gs-g-5)" stroke-width="0.95" stroke-linecap="round"/><path d="M50 3C62.6 3 72 14 72 30C72 46 62.4 59.6 50 66C37.6 59.6 28 46 28 30C28 14 37.4 3 50 3Z" fill="url(#gs-g-5)" mask="url(#gs-m-5)"/><ellipse cx="50" cy="28.6" rx="14.6" ry="18" fill="#C9A24B"/><ellipse cx="50" cy="29.9" rx="11.5" ry="14.6" fill="#1A8C8C"/><ellipse cx="50" cy="31.7" rx="7" ry="9.5" fill="#0B2A3C"/></g></g><text class="gk" x="140" y="180" font-size="58" text-anchor="middle" textLength="214" lengthAdjust="spacingAndGlyphs" fill="#0B2A3C">GOKUL</text><text class="hs" x="141.5" y="206" font-size="12.5" text-anchor="middle" textLength="211" lengthAdjust="spacing" fill="#0E4D64">HOSPITAL</text><rect x="118" y="220" width="44" height="1" fill="#C9A24B"/><text class="hi" x="140" y="248" font-size="19" text-anchor="middle" fill="#0E4D64">गोकुल हॉस्पिटल</text></svg><span class="cap">Stacked, bilingual</span></div>
       </div>
       <div class="concepts">
-        <div class="concept final"><img src="logo/concept-1-feather.svg" alt="Concept 1: peacock feather mark with wordmark"><span class="tag">Concept 1 · Recommended</span><p>Pure feather. The calmest option, and the most legible at small sizes.</p></div>
-        <div class="concept"><img src="logo/concept-2-feather-flute.svg" alt="Concept 2: feather crossing a flute"><span class="tag">Concept 2 · Feather &amp; flute</span><p>The most direct reference to Krishna, which makes it feel more devotional than medical.</p></div>
-        <div class="concept"><img src="logo/concept-3-feather-care.svg" alt="Concept 3: feather with a soft medical cross"><span class="tag">Concept 3 · Feather &amp; care</span><p>A soft cross in the eye. It says "hospital" fastest, but loses some warmth.</p></div>
+        <div class="concept final"><img src="logo/concept-1-feather.svg" alt="Concept 1: peacock feather mark with wordmark"><span class="tag">Concept 1 · Recommended</span><p>Calmest, and clearest at small sizes.</p></div>
+        <div class="concept"><img src="logo/concept-2-feather-flute.svg" alt="Concept 2: feather crossing a flute"><span class="tag">Concept 2 · Feather &amp; flute</span><p>Most devotional.</p></div>
+        <div class="concept"><img src="logo/concept-3-feather-care.svg" alt="Concept 3: feather with a soft medical cross"><span class="tag">Concept 3 · Feather &amp; care</span><p>Most clinical.</p></div>
       </div>
       <div class="system">
         <div class="swatches">
@@ -261,35 +277,43 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
           <small>Hindi · Tiro Devanagari</small><div class="h" lang="hi">गोकुल हॉस्पिटल</div>
         </div>
       </div>
-      <p class="more"><a href="https://gokul-hospital-two.vercel.app/logo">Open the full logo board</a>: all variants, favicon test, clear-space rules. · <a href="https://gokul-hospital-two.vercel.app/brand">Read the brand guidelines</a>: voice, colour, type, motifs, photography and UI.</p>
+      <p class="more"><a href="https://gokul-hospital-two.vercel.app/logo">Logo board</a> · <a href="https://gokul-hospital-two.vercel.app/brand">Brand guidelines</a></p>
     </div>
   </section>
 
-  <section class="chapter band" id="website">
+  <section class="chapter band-light" id="home-v1">
     <div class="wrap">
       <div class="chapter-head">
-        <p class="eyebrow">03 · Website</p>
-        <h2>Two directions, <em>one story.</em></h2>
-        <p class="lede">The same home page content in two moods. Switch between them below, then open either one to scroll the live demo.</p>
-      </div>
-      <div class="switch" role="tablist" aria-label="Home page direction">
-        <button type="button" role="tab" id="tab-brand" aria-selected="true" data-v="brand">A · Brand, light</button>
-        <button type="button" role="tab" id="tab-dark" aria-selected="false" data-v="dark">B · Night, dark</button>
+        <p class="eyebrow">02 · Website, version 1</p>
+        <h2>Home page, <em>light.</em></h2>
+        <p class="lede">Cream, peacock and gold. Calm and reassuring.</p>
       </div>
       <div class="stage">
         <div class="browser">
-          <div class="chrome"><i></i><i></i><i></i><span id="url">gokulhospital.in</span></div>
-          <div class="viewport"><img id="shot-desk" src="shots/brand-desktop.png" alt="Home page A, light brand theme, desktop view"></div>
+          <div class="chrome"><i></i><i></i><i></i><span>gokulhospital.in</span></div>
+          <div class="viewport"><img src="shots/brand-desktop.png" alt="Home page version 1, light theme, desktop view"></div>
         </div>
-        <div class="phone"><div class="viewport"><img id="shot-mob" src="shots/brand-mobile.png" alt="Home page A on a phone"></div></div>
+        <div class="phone"><div class="viewport"><img src="shots/brand-mobile.png" alt="Home page version 1 on a phone"></div></div>
       </div>
-      <div class="stage-foot">
-        <p id="desc">Direction A: cream and peacock with gold hairlines. Calm, editorial and reassuring for expecting mothers and their families.</p>
-        <a class="btn" id="open" href="https://gokul-hospital-two.vercel.app/Home-V1">Open live demo →</a>
+      <div class="stage-foot"><a class="btn" href="https://gokul-hospital-two.vercel.app/Home-V1">Open Home-V1 →</a></div>
+    </div>
+  </section>
+
+  <section class="chapter band" id="home-v2">
+    <div class="wrap">
+      <div class="chapter-head">
+        <p class="eyebrow">03 · Website, version 2</p>
+        <h2>Home page, <em>dark.</em></h2>
+        <p class="lede">Deep peacock navy with gold light. More premium, still calm.</p>
       </div>
-      <div class="sections" aria-label="Sections on the home page">
-        <span>Hero &amp; trust stats</span><span>Services</span><span>Pregnancy journey</span><span>Dr. Rohita</span><span>4.8★ reviews</span><span>Why Gokul</span><span>Map &amp; directions</span><span>Appointment form</span><span>WhatsApp / call bar</span>
+      <div class="stage stage-rev">
+        <div class="phone"><div class="viewport"><img src="shots/dark-mobile.png" alt="Home page version 2 on a phone"></div></div>
+        <div class="browser">
+          <div class="chrome"><i></i><i></i><i></i><span>gokulhospital.in</span></div>
+          <div class="viewport"><img src="shots/dark-desktop.png" alt="Home page version 2, dark theme, desktop view"></div>
+        </div>
       </div>
+      <div class="stage-foot"><a class="btn" href="https://gokul-hospital-two.vercel.app/Home-V2">Open Home-V2 →</a></div>
     </div>
   </section>
 
@@ -297,22 +321,64 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
     <div class="wrap">
       <div class="chapter-head">
         <p class="eyebrow">04 · Social &amp; ads</p>
-        <h2>Ready for Instagram, <em>Facebook and WhatsApp.</em></h2>
-        <p class="lede">Seven creatives in one system: cream for care, navy for trust and urgency. Every one carries the logo and a call or WhatsApp number.</p>
+        <h2>Ready for <em>Instagram and Facebook.</em></h2>
+        <p class="lede">Seven creatives in one system. Tap any to view it large.</p>
       </div>
       <div class="ads">
-        <figure class="ad a4"><img src="ads/01-brand-intro.png" alt="Instagram post: Care, like a mother's"><figcaption><b>Brand intro</b><span>Post 1:1</span></figcaption></figure>
-        <figure class="ad a4"><img src="ads/02-maternity-care.png" alt="Instagram post: maternity care services"><figcaption><b>Maternity care</b><span>Post 1:1</span></figcaption></figure>
-        <figure class="ad a4"><img src="ads/03-trust-rating.png" alt="Instagram post: 4.8 star rating"><figcaption><b>4.8★ trust</b><span>Post 1:1</span></figcaption></figure>
-        <figure class="ad a3"><img src="ads/04-fertility-ivf.png" alt="Instagram portrait: Fertility and IVF, hope held gently"><figcaption><b>Fertility &amp; IVF</b><span>Portrait 4:5</span></figcaption></figure>
-        <figure class="ad a3"><img src="ads/05-emergency-story.png" alt="Story: 24x7 emergency, opposite Metro Pillar 781"><figcaption><b>24×7 Emergency</b><span>Story 9:16</span></figcaption></figure>
-        <figure class="ad a3"><img src="ads/06-meta-ad-checkup.png" alt="Meta ad: book a pregnancy check-up"><figcaption><b>Check-up ad</b><span>Meta feed 1:1</span></figcaption></figure>
-        <figure class="ad a3"><img src="ads/07-janmashtami.png" alt="Festive post: Happy Janmashtami"><figcaption><b>Janmashtami</b><span>Festive 1:1</span></figcaption></figure>
+        <figure class="ad a4"><button type="button" class="ad-open"><img src="ads/01-brand-intro.png" alt="Instagram post: Care, like a mother's"></button><figcaption><b>Brand intro</b><span>Post 1:1</span></figcaption></figure>
+        <figure class="ad a4"><button type="button" class="ad-open"><img src="ads/02-maternity-care.png" alt="Instagram post: maternity care services"></button><figcaption><b>Maternity care</b><span>Post 1:1</span></figcaption></figure>
+        <figure class="ad a4"><button type="button" class="ad-open"><img src="ads/03-trust-rating.png" alt="Instagram post: 4.8 star rating"></button><figcaption><b>4.8★ trust</b><span>Post 1:1</span></figcaption></figure>
+        <figure class="ad a3"><button type="button" class="ad-open"><img src="ads/04-fertility-ivf.png" alt="Instagram portrait: Fertility and IVF, hope held gently"></button><figcaption><b>Fertility &amp; IVF</b><span>Portrait 4:5</span></figcaption></figure>
+        <figure class="ad a3"><button type="button" class="ad-open"><img src="ads/05-emergency-story.png" alt="Story: 24x7 emergency, opposite Metro Pillar 781"></button><figcaption><b>24×7 Emergency</b><span>Story 9:16</span></figcaption></figure>
+        <figure class="ad a3"><button type="button" class="ad-open"><img src="ads/06-meta-ad-checkup.png" alt="Meta ad: book a pregnancy check-up"></button><figcaption><b>Check-up ad</b><span>Meta feed 1:1</span></figcaption></figure>
+        <figure class="ad a3"><button type="button" class="ad-open"><img src="ads/07-janmashtami.png" alt="Festive post: Happy Janmashtami"></button><figcaption><b>Janmashtami</b><span>Festive 1:1</span></figcaption></figure>
       </div>
-      <p class="more"><a href="https://gokul-hospital-two.vercel.app/ads">Open the ads gallery</a>: every creative at full size.</p>
-      <div class="copy">
-        <div><small>Meta ad copy · English</small><p><b>Book a pregnancy check-up</b><br>Gentle, experienced maternity care opposite Dwarka Mor metro. Rated 4.8★ by 500+ patients. WhatsApp us to book.</p></div>
-        <div><small>Meta ad copy · Hinglish</small><p><b>Pregnancy check-up book karein</b><br>Dwarka Mor metro ke saamne, Gokul Hospital mein caring maternity care. 500+ patients ne diya 4.8★. Abhi WhatsApp karein.</p></div>
+      <p class="more"><a href="https://gokul-hospital-two.vercel.app/ads">Open the ads gallery</a></p>
+    </div>
+  </section>
+
+  <section class="chapter band-light" id="growth">
+    <div class="wrap">
+      <div class="chapter-head">
+        <p class="eyebrow">05 · Growth</p>
+        <h2>Found first <em>in Dwarka.</em></h2>
+        <p class="lede">SEO, local SEO and social media, run as one plan.</p>
+      </div>
+      <div class="growth">
+        <div class="g-card">
+          <span class="g-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+          <h3>SEO</h3>
+          <ul>
+            <li>Fast, mobile-first pages</li>
+            <li>A page for every service</li>
+            <li>Hospital and doctor schema</li>
+            <li>English and Hindi content</li>
+          </ul>
+        </div>
+        <div class="g-card">
+          <span class="g-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <h3>Local SEO</h3>
+          <ul>
+            <li>Google Business Profile, fully set up</li>
+            <li>Same name, address, phone on Justdial and Practo</li>
+            <li>Review requests after discharge, by WhatsApp</li>
+            <li>"Near Dwarka Mor" landing pages</li>
+          </ul>
+        </div>
+        <div class="g-card">
+          <span class="g-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></span>
+          <h3>Social media</h3>
+          <ul>
+            <li>Instagram and Facebook calendar, 3–4 posts a week</li>
+            <li>Reels: doctor tips, hospital tour</li>
+            <li>Festive and awareness days</li>
+            <li>Meta ads around Dwarka, straight to WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+      <div class="kw" aria-label="Searches we target">
+        <small>Searches we target</small>
+        <span>gynaecologist in Dwarka</span><span>maternity hospital Dwarka Mor</span><span>IVF centre West Delhi</span><span>normal delivery hospital near me</span><span>24 hour hospital Dwarka</span>
       </div>
     </div>
   </section>
@@ -320,28 +386,25 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
   <section class="chapter" id="next">
     <div class="wrap">
       <div class="chapter-head">
-        <p class="eyebrow">05 · Next steps</p>
+        <p class="eyebrow">06 · Next steps</p>
         <h2>From demo to <em>live site.</em></h2>
       </div>
       <div class="scope">
         <div class="card"><h3>The full website</h3><ul>
-          <li>Home, About, Services, Doctors, Maternity, Fertility &amp; IVF, Contact</li>
-          <li>WhatsApp and call booking on every page</li>
+          <li>Home, Services, Doctors, Maternity, IVF, Contact</li>
+          <li>WhatsApp and call booking everywhere</li>
           <li>English and Hindi</li>
-          <li>Google Maps, Google Business profile and local SEO for Dwarka</li>
-          <li>Fast on mobile data</li>
         </ul></div>
         <div class="card"><h3>Timeline</h3><ul class="steps">
-          <li>Finalise logo and choose direction A or B</li>
-          <li>Photo shoot, doctor profiles, content</li>
-          <li>Build all pages, Hindi version</li>
-          <li>Review, launch and social kit handover</li>
+          <li>Pick logo and direction</li>
+          <li>Photos and content</li>
+          <li>Build all pages</li>
+          <li>Launch and handover</li>
         </ul></div>
-        <div class="card"><h3>What we need from you</h3><ul>
-          <li>Your pick of logo concept and website direction</li>
-          <li>Real photos of the hospital, rooms and team (we can arrange a shoot)</li>
-          <li>Doctor names, qualifications and timings</li>
-          <li>Services and facilities you want to highlight</li>
+        <div class="card"><h3>What we need</h3><ul>
+          <li>Your logo and website pick</li>
+          <li>Hospital and team photos</li>
+          <li>Doctor details and timings</li>
         </ul></div>
       </div>
     </div>
@@ -351,32 +414,43 @@ footer .hi{color:var(--gold-soft);font-size:1.1rem}
 <footer>
   <div class="wrap">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 116" role="img" focusable="false" aria-label="Gokul Hospital (reversed)"><g transform="translate(-16 9) scale(1.07)"><g transform="translate(50 50) rotate(16) scale(0.92) translate(-50 -51.5)"><defs><linearGradient id="gr-g-4" x1="0" y1="4" x2="0" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1A8C8C"/><stop offset=".55" stop-color="#3E8E5A"/><stop offset="1" stop-color="#3E8E5A"/></linearGradient><mask id="gr-m-4" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/></mask></defs><path d="M49.05 56L50.95 56L50.42 97.6Q50 99 49.58 97.6Z" fill="#E6CF8F"/><path d="M50 64.33Q39.25 55.52 28.5 51M50 64.33Q60.75 55.52 71.5 51M50 67.45Q40.45 59.61 30.89 55.6M50 67.45Q59.55 59.61 69.11 55.6M50 70.56Q41.64 63.71 33.28 60.2M50 70.56Q58.36 63.71 66.72 60.2M50 73.68Q42.84 67.81 35.68 64.8M50 73.68Q57.16 67.81 64.32 64.8M50 76.8Q44.03 71.91 38.07 69.4M50 76.8Q55.97 71.91 61.93 69.4M50 79.91Q45.23 76 40.46 74M50 79.91Q54.77 76 59.54 74M50 83.03Q46.43 80.1 42.85 78.6M50 83.03Q53.57 80.1 57.15 78.6M50 86.15Q47.62 84.2 45.24 83.2M50 86.15Q52.38 84.2 54.76 83.2M50 89.27Q48.82 88.3 47.64 87.8M50 89.27Q51.18 88.3 52.36 87.8" fill="none" stroke="url(#gr-g-4)" stroke-width="0.95" stroke-linecap="round"/><path d="M50 3C62.6 3 72 14 72 30C72 46 62.4 59.6 50 66C37.6 59.6 28 46 28 30C28 14 37.4 3 50 3Z" fill="url(#gr-g-4)" mask="url(#gr-m-4)"/><ellipse cx="50" cy="28.6" rx="14.6" ry="18" fill="#C9A24B"/><ellipse cx="50" cy="29.9" rx="11.5" ry="14.6" fill="#2BA3A0"/><ellipse cx="50" cy="31.7" rx="7" ry="9.5" fill="#0B2A3C"/></g></g><text class="gk" x="88" y="66" font-size="62" textLength="236" lengthAdjust="spacingAndGlyphs" fill="#FBF7EF">GOKUL</text><rect x="89" y="80" width="234" height="1" fill="#C9A24B"/><text class="hs" x="89.5" y="103" font-size="13.5" textLength="233" lengthAdjust="spacing" fill="#E6CF8F">HOSPITAL</text></svg>
-    <div><p class="hi" lang="hi">माँ जैसी देखभाल</p><p>Concept proposal for Gokul Hospital. Photos are placeholders; reviews are paraphrased from public ratings.</p></div>
+    <div><p class="hi" lang="hi">माँ जैसी देखभाल</p><p>Concept proposal for Gokul Hospital. Photos are stock; reviews are paraphrased.</p></div>
   </div>
 </footer>
 
+<dialog id="lb" aria-label="Creative preview">
+  <div class="lb-in">
+    <img id="lb-img" alt="">
+    <div class="lb-bar">
+      <span id="lb-cap"></span>
+      <div class="lb-nav">
+        <button type="button" id="lb-prev" aria-label="Previous creative">←</button>
+        <button type="button" id="lb-next" aria-label="Next creative">→</button>
+        <button type="button" id="lb-close" aria-label="Close preview">✕</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
 <script>
 (function(){
-  var V={
-    brand:{d:'shots/brand-desktop.png',m:'shots/brand-mobile.png',href:'https://gokul-hospital-two.vercel.app/Home-V1',alt:'Home page A, light brand theme',desc:'Direction A: cream and peacock with gold hairlines. Calm, editorial and reassuring for expecting mothers and their families.'},
-    dark:{d:'shots/dark-desktop.png',m:'shots/dark-mobile.png',href:'https://gokul-hospital-two.vercel.app/Home-V2',alt:'Home page B, dark night theme',desc:'Direction B: the same page in deep peacock navy, with gold light and soft glows. More premium and memorable, and still calm.'}
-  };
-  var tabs=[].slice.call(document.querySelectorAll('.switch button'));
-  var d=document.getElementById('shot-desk'),m=document.getElementById('shot-mob');
-  // preload
-  Object.keys(V).forEach(function(k){[V[k].d,V[k].m].forEach(function(s){var i=new Image();i.src=s;});});
-  function show(k){
-    var v=V[k];
-    tabs.forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.v===k));t.tabIndex=t.dataset.v===k?0:-1;});
-    d.src=v.d;d.alt=v.alt+', desktop view';m.src=v.m;m.alt=v.alt+' on a phone';
-    document.getElementById('open').href=v.href;
-    document.getElementById('desc').textContent=v.desc;
+  var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap');
+  var items=[].slice.call(document.querySelectorAll('.ad-open'));
+  var cur=0;
+  function show(i){
+    cur=(i+items.length)%items.length;
+    var src=items[cur].querySelector('img'),fig=items[cur].closest('figure');
+    img.src=src.currentSrc||src.src;img.alt=src.alt;
+    cap.innerHTML=fig.querySelector('figcaption').innerHTML;
   }
-  tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){show(t.dataset.v);});
-    t.addEventListener('keydown',function(e){
-      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];n.focus();show(n.dataset.v);}
-    });
-  });
+  function open(i){show(i);if(lb.showModal){lb.showModal();}else{lb.setAttribute('open','');}document.documentElement.style.overflow='hidden';}
+  function close(){if(lb.close){lb.close();}else{lb.removeAttribute('open');}}
+  lb.addEventListener('close',function(){document.documentElement.style.overflow='';if(items[cur])items[cur].focus();});
+  items.forEach(function(b,i){b.addEventListener('click',function(){open(i);});});
+  document.getElementById('lb-prev').addEventListener('click',function(){show(cur-1);});
+  document.getElementById('lb-next').addEventListener('click',function(){show(cur+1);});
+  document.getElementById('lb-close').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
 })();
 </script>
