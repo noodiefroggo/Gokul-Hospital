@@ -44,13 +44,18 @@ a{color:inherit;text-decoration:none}
 .ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(11,42,60,.05) 0 2px,transparent 2px 18px)}
 .ph .ph-l{position:relative;margin-bottom:34px;font:700 15px/1.3 'Manrope';letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;background:rgba(251,247,239,.82);color:var(--peacock-700);text-align:center}
 .arch{border-radius:999px 999px 18px 18px}
+.photo{position:absolute;overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo .fade{position:absolute;inset:0}
 
 /* creative-specific */
 .c2-logo{position:absolute;left:var(--pad);top:80px;width:250px}
 .c2-eb{position:absolute;left:var(--pad);top:262px;color:var(--teal-500)}
 .c2-h{position:absolute;left:var(--pad);top:304px;width:560px;font-size:84px;line-height:1.02}
 .c2-h em{color:var(--teal-500)}
-.c2-ph{right:var(--pad);top:80px;width:330px;height:560px;background:linear-gradient(170deg,#F8E1DC 0%,#F4C9C5 60%,#EFB9B5 100%)}
+.c2-ph{right:var(--pad);top:80px;width:330px;height:560px;border-radius:999px 999px 18px 18px}
+.c2-ph img{object-position:50% 35%}
+.c2-ph .fade{background:linear-gradient(180deg,rgba(251,247,239,0) 70%,rgba(242,184,181,.35) 100%)}
 .c2-ph-ring{position:absolute;right:calc(var(--pad) - 14px);top:66px;width:358px;height:588px;border:1px solid var(--gold-500);border-radius:999px 999px 26px 26px}
 .c2-list{position:absolute;left:var(--pad);right:var(--pad);top:704px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--gold-500)}
 .c2-list div{padding:26px 22px 0 0}
@@ -63,13 +68,7 @@ a{color:inherit;text-decoration:none}
 <main class="art sq light" style="width:1080px;height:1080px">
 <div class="layer"><svg viewBox="0 0 1080 1080"><path d="M0 -140Q540 -280 1080 -140M0 -93.1Q540 -233.1 1080 -93.1M0 -46.21Q540 -186.21 1080 -46.21M0 0.69Q540 -139.31 1080 0.69M0 47.59Q540 -92.41 1080 47.59M0 94.48Q540 -45.52 1080 94.48M0 141.38Q540 1.38 1080 141.38M0 188.28Q540 48.28 1080 188.28M0 235.17Q540 95.17 1080 235.17M0 282.07Q540 142.07 1080 282.07M0 328.97Q540 188.97 1080 328.97M0 375.86Q540 235.86 1080 375.86M0 422.76Q540 282.76 1080 422.76M0 469.66Q540 329.66 1080 469.66M0 516.55Q540 376.55 1080 516.55M0 563.45Q540 423.45 1080 563.45M0 610.34Q540 470.34 1080 610.34M0 657.24Q540 517.24 1080 657.24M0 704.14Q540 564.14 1080 704.14M0 751.03Q540 611.03 1080 751.03M0 797.93Q540 657.93 1080 797.93M0 844.83Q540 704.83 1080 844.83M0 891.72Q540 751.72 1080 891.72M0 938.62Q540 798.62 1080 938.62M0 985.52Q540 845.52 1080 985.52M0 1032.41Q540 892.41 1080 1032.41M0 1079.31Q540 939.31 1080 1079.31M0 1126.21Q540 986.21 1080 1126.21M0 1173.1Q540 1033.1 1080 1173.1M0 1220Q540 1080 1080 1220" fill="none" stroke="#1A8C8C" stroke-width="1.2" opacity="0.05"/></svg></div>
 <div class="c2-ph-ring"></div>
-<div class="ph arch c2-ph"><svg viewBox="0 0 400 260" style="position:absolute;left:40px;right:40px;top:210px;width:250px;opacity:.55"><g fill="none" stroke="#FBF7EF" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
-<path d="M200 22C242 72 242 150 200 202C158 150 158 72 200 22Z"/>
-<path d="M200 202C150 192 108 142 104 80C150 94 186 140 200 202Z"/>
-<path d="M200 202C250 192 292 142 296 80C250 94 214 140 200 202Z"/>
-<path d="M200 206C130 212 60 182 28 132C90 120 162 150 200 206Z"/>
-<path d="M200 206C270 212 340 182 372 132C310 120 238 150 200 206Z"/>
-<path d="M60 230Q200 252 340 230" /><path d="M110 246Q200 258 290 246" opacity=".6"/></g></svg><span class="ph-l">Photo placeholder<br>Mother &amp; newborn</span></div>
+<div class="photo c2-ph"><img src="../assets/img/ads/02-checkup.jpg" alt="Pregnant woman at a check-up with her doctor"><div class="fade"></div></div>
 <div class="c2-logo"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 116" role="img" aria-label="Gokul Hospital"><style><![CDATA[.gk{font-family:'Fraunces','Cormorant Garamond',Georgia,serif;font-weight:560;font-variation-settings:'SOFT' 50,'opsz' 144;}
 .hs{font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-weight:600;}
 .hi{font-family:'Tiro Devanagari Hindi','Noto Serif Devanagari',serif;}]]></style><g transform="translate(-16 9) scale(1.07)"><g transform="translate(50 50) rotate(16) scale(0.92) translate(-50 -51.5)"><defs><linearGradient id="gp-g" x1="0" y1="4" x2="0" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0E4D64"/><stop offset=".55" stop-color="#1A8C8C"/><stop offset="1" stop-color="#1A8C8C"/></linearGradient><mask id="gp-m" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/></mask></defs><path d="M49.05 56L50.95 56L50.42 97.6Q50 99 49.58 97.6Z" fill="#0B2A3C"/><path d="M50 64.33Q39.25 55.52 28.5 51M50 64.33Q60.75 55.52 71.5 51M50 67.45Q40.45 59.61 30.89 55.6M50 67.45Q59.55 59.61 69.11 55.6M50 70.56Q41.64 63.71 33.28 60.2M50 70.56Q58.36 63.71 66.72 60.2M50 73.68Q42.84 67.81 35.68 64.8M50 73.68Q57.16 67.81 64.32 64.8M50 76.8Q44.03 71.91 38.07 69.4M50 76.8Q55.97 71.91 61.93 69.4M50 79.91Q45.23 76 40.46 74M50 79.91Q54.77 76 59.54 74M50 83.03Q46.43 80.1 42.85 78.6M50 83.03Q53.57 80.1 57.15 78.6M50 86.15Q47.62 84.2 45.24 83.2M50 86.15Q52.38 84.2 54.76 83.2M50 89.27Q48.82 88.3 47.64 87.8M50 89.27Q51.18 88.3 52.36 87.8" fill="none" stroke="url(#gp-g)" stroke-width="0.95" stroke-linecap="round"/><path d="M50 3C62.6 3 72 14 72 30C72 46 62.4 59.6 50 66C37.6 59.6 28 46 28 30C28 14 37.4 3 50 3Z" fill="url(#gp-g)" mask="url(#gp-m)"/><ellipse cx="50" cy="28.6" rx="14.6" ry="18" fill="#C9A24B"/><ellipse cx="50" cy="29.9" rx="11.5" ry="14.6" fill="#1A8C8C"/><ellipse cx="50" cy="31.7" rx="7" ry="9.5" fill="#0B2A3C"/></g></g><text class="gk" x="88" y="66" font-size="62" textLength="236" lengthAdjust="spacingAndGlyphs" fill="#0B2A3C">GOKUL</text><rect x="89" y="80" width="234" height="1" fill="#C9A24B"/><text class="hs" x="89.5" y="103" font-size="13.5" textLength="233" lengthAdjust="spacing" fill="#0E4D64">HOSPITAL</text></svg>

@@ -50,3 +50,21 @@
 - Source page: https://www.pexels.com/photo/a-cute-newborn-baby-sleeping-on-her-mother-s-arm-4101057/
 - Downloaded file: https://images.pexels.com/photos/4101057/pexels-photo-4101057.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=max (1600×1067 JPG, ~124 KB)
 - Licence: Pexels License (https://www.pexels.com/license/)
+
+## Used in social creatives (ads/)
+- 01-brand-intro: family-dark.jpg (inside the gold arch, faded into navy)
+- 02-maternity-care: family-light.jpg (arch)
+- 04-fertility-ivf: doctor-3.jpg (arch, faded into cream)
+- 06-meta-ad-checkup: doctor-rohita.jpg (arch panel). The ad shows no name; the model is a stock model, not Dr. Rohita.
+
+## Ad creative photos (assets/img/ads/)
+
+All from Pexels, used under the Pexels License (free commercial use, no attribution required).
+
+| File | Used in | Photo | Photographer |
+|---|---|---|---|
+| 02-checkup.jpg | 02 Maternity care | [A Patient Getting an Ultrasound](https://www.pexels.com/photo/7108414/) | Pavel Danilyuk |
+| 03-consultation.jpg | 03 Trust | [A Doctor Getting a Patient Vital Signs](https://www.pexels.com/photo/14558557/) | Imad Clicks |
+| 04-fertility.jpg | 04 Fertility & IVF | [Pregnant woman in traditional Indian attire](https://www.pexels.com/photo/37153685/) | Golden Ratio Captures |
+| 05-care.jpg | 05 Emergency story | [Healthcare professionals in hospital corridor](https://www.pexels.com/photo/31499386/) | Adarsh Mp |
+| 06-exam.jpg | 06 Meta check-up ad | [Pregnant woman in traditional Gujarati saree](https://www.pexels.com/photo/38491534/) | Darshan Dave |

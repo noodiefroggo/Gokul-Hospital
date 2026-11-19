@@ -44,14 +44,18 @@ a{color:inherit;text-decoration:none}
 .ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(11,42,60,.05) 0 2px,transparent 2px 18px)}
 .ph .ph-l{position:relative;margin-bottom:34px;font:700 15px/1.3 'Manrope';letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;background:rgba(251,247,239,.82);color:var(--peacock-700);text-align:center}
 .arch{border-radius:999px 999px 18px 18px}
+.photo{position:absolute;overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo .fade{position:absolute;inset:0}
 
 /* creative-specific */
 .c6-bg{background:linear-gradient(180deg,var(--cream-50) 0%,var(--cream-100) 100%)}
 .c6-logo{position:absolute;left:var(--pad);top:80px;width:250px}
-.c6-ph{left:560px;top:0;right:0;bottom:0;border-radius:0;background:linear-gradient(160deg,#CFE3E0 0%,#9CCAC6 50%,#6FB0AD 100%)}
-.c6-ph::after{content:"";position:absolute;left:0;top:0;bottom:0;width:180px;background:linear-gradient(90deg,var(--cream-50),rgba(251,247,239,0))}
-.c6-archmask{position:absolute;left:610px;top:230px;width:380px;height:850px;border:1.5px solid rgba(251,247,239,.9);border-radius:999px 999px 0 0;border-bottom:0}
-.c6-badge{position:absolute;right:70px;top:80px;background:var(--cream-50);border-radius:20px;padding:18px 24px;box-shadow:0 14px 40px rgba(11,42,60,.16);display:flex;align-items:center;gap:16px}
+.c6-ph{left:664px;top:150px;width:350px;bottom:0;border-radius:999px 999px 0 0;background:#F3E6D8}
+.c6-ph img{object-position:50% 0%}
+.c6-ph .fade{background:linear-gradient(180deg,rgba(243,234,218,0) 72%,rgba(243,234,218,.85) 100%)}
+.c6-archmask{position:absolute;left:650px;top:136px;width:378px;height:944px;border:1.5px solid var(--gold-500);border-radius:999px 999px 0 0;border-bottom:0}
+.c6-badge{position:absolute;right:56px;bottom:72px;background:var(--cream-50);border-radius:20px;padding:18px 24px;box-shadow:0 14px 40px rgba(11,42,60,.16);display:flex;align-items:center;gap:16px}
 .c6-badge b{font:400 54px/1 'Fraunces';color:var(--peacock-900)}
 .c6-badge span{font:600 18px/1.3 'Manrope';color:var(--ink-700)}
 .c6-badge .st{color:var(--gold-500);font-size:22px}
@@ -73,9 +77,8 @@ a{color:inherit;text-decoration:none}
 <!-- Artboard: 1080×1080px. Open with ?fit to scale it to the window. -->
 <main class="art sq light" style="width:1080px;height:1080px">
 <div class="layer c6-bg"></div>
-<div class="ph c6-ph"><span class="ph-l" style="position:absolute;top:400px;left:50%;transform:translateX(-50%);margin:0;white-space:nowrap">Photo placeholder<br>Expecting mother, check-up</span></div>
+<div class="photo c6-ph"><img src="../assets/img/ads/06-exam.jpg" alt="Doctor examining a pregnant woman"><div class="fade"></div></div>
 <div class="c6-archmask"></div>
-<div class="layer"><svg viewBox="0 0 1080 1080"><g transform="translate(930 800) rotate(12) scale(0.82) translate(-100 -300)"><g opacity="0.55"><path d="M100 197.78Q72.35 191.66 34.17 156.96M100 197.78Q127.65 191.66 165.83 156.96M100 207.56Q70.89 201.11 30.7 164.59M100 207.56Q129.11 201.11 169.3 164.59M100 217.33Q69.54 210.59 27.47 172.37M100 217.33Q130.46 210.59 172.53 172.37M100 227.11Q68.29 220.09 24.49 180.3M100 227.11Q131.71 220.09 175.51 180.3M100 236.89Q67.14 229.61 21.76 188.38M100 236.89Q132.86 229.61 178.24 188.38M100 246.67Q66.09 239.16 19.27 196.61M100 246.67Q133.91 239.16 180.73 196.61M100 256.44Q65.15 248.73 17.02 205M100 256.44Q134.85 248.73 182.98 205M100 266.22Q64.31 258.32 15.02 213.54M100 266.22Q135.69 258.32 184.98 213.54M100 276Q63.57 267.93 13.27 222.23M100 276Q136.43 267.93 186.73 222.23M100 285.78Q62.94 277.57 11.77 231.07M100 285.78Q137.06 277.57 188.23 231.07M100 295.56Q62.42 287.23 10.52 240.07M100 295.56Q137.58 287.23 189.48 240.07M100 305.33Q62 296.92 9.51 249.23M100 305.33Q138 296.92 190.49 249.23M100 315.11Q61.68 306.63 8.77 258.55M100 315.11Q138.32 306.63 191.23 258.55M100 324.89Q61.47 316.36 8.27 268.02M100 324.89Q138.53 316.36 191.73 268.02M100 334.67Q61.37 326.11 8.03 277.64M100 334.67Q138.63 326.11 191.97 277.64M100 344.44Q61.38 335.89 8.04 287.43M100 344.44Q138.62 335.89 191.96 287.43M100 354.22Q61.49 345.69 8.3 297.37M100 354.22Q138.51 345.69 191.7 297.37M100 364Q61.7 355.52 8.82 307.47M100 364Q138.3 355.52 191.18 307.47M100 373.78Q62.03 365.37 9.59 317.72M100 373.78Q137.97 365.37 190.41 317.72M100 383.56Q62.46 375.24 10.61 328.14M100 383.56Q137.54 375.24 189.39 328.14M100 393.33Q62.99 385.14 11.89 338.7M100 393.33Q137.01 385.14 188.11 338.7M100 403.11Q63.63 395.06 13.41 349.43M100 403.11Q136.37 395.06 186.59 349.43M100 412.89Q64.38 405 15.19 360.3M100 412.89Q135.62 405 184.81 360.3M100 422.67Q65.23 414.97 17.21 371.33M100 422.67Q134.77 414.97 182.79 371.33M100 432.44Q66.18 424.96 19.47 382.52M100 432.44Q133.82 424.96 180.53 382.52M100 442.22Q67.23 434.97 21.98 393.85M100 442.22Q132.77 434.97 178.02 393.85M100 452Q68.39 445 24.74 405.34M100 452Q131.61 445 175.26 405.34M100 461.78Q69.65 455.06 27.74 416.98M100 461.78Q130.35 455.06 172.26 416.98M100 471.56Q71.01 465.14 30.99 428.77M100 471.56Q128.99 465.14 169.01 428.77M100 481.33Q72.48 475.24 34.48 440.71M100 481.33Q127.52 475.24 165.52 440.71M100 491.11Q74.05 485.37 38.22 452.81M100 491.11Q125.95 485.37 161.78 452.81M100 500.89Q75.73 495.52 42.22 465.07M100 500.89Q124.27 495.52 157.78 465.07M100 510.67Q77.53 505.69 46.49 477.49M100 510.67Q122.47 505.69 153.51 477.49M100 520.44Q79.44 515.89 51.04 490.09M100 520.44Q120.56 515.89 148.96 490.09M100 530.22Q81.48 526.12 55.9 502.88M100 530.22Q118.52 526.12 144.1 502.88M100 540Q83.67 536.38 61.12 515.9M100 540Q116.33 536.38 138.88 515.9" fill="none" stroke="#FBF7EF" stroke-width="1.2" stroke-linecap="round"/><path d="M100 130L100 590" stroke="#FBF7EF" stroke-width="2.4" stroke-linecap="round"/><g fill="none" stroke="#FBF7EF" stroke-width="1.68"><path d="M100 22C138 22 164 62 164 118C164 176 134 220 100 244C66 220 36 176 36 118C36 62 62 22 100 22Z"/><ellipse cx="100" cy="112" rx="46" ry="60"/><ellipse cx="100" cy="117" rx="33" ry="45"/><ellipse cx="100" cy="124" rx="19" ry="27"/></g></g></g></svg></div>
 <div class="c6-badge"><b>4.8</b><span><span class="st"><svg viewBox="0 0 24 24" class="st"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="currentColor"/></svg></span> 500+ ratings<br>on Justdial</span></div>
 <div class="c6-logo"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 116" role="img" aria-label="Gokul Hospital"><style><![CDATA[.gk{font-family:'Fraunces','Cormorant Garamond',Georgia,serif;font-weight:560;font-variation-settings:'SOFT' 50,'opsz' 144;}
 .hs{font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-weight:600;}

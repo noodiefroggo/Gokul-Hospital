@@ -6,6 +6,9 @@ const OUT = path.join(ROOT, 'ads');
 
 
 const PHONE = '+91 97189 34517';
+// New contextual stock photos live in assets/img/ads/<slot>.jpg; each slot falls back when its file is missing.
+const adImg = (slot) => fs.existsSync(path.join(ROOT, 'assets/img/ads', slot + '.jpg')) ? '../assets/img/ads/' + slot + '.jpg' : null;
+const P02 = adImg('02-checkup'), P03 = adImg('03-consultation'), P04 = adImg('04-fertility'), P05 = adImg('05-care'), P06 = adImg('06-exam');
 const TEL = 'tel:+919718934517';
 
 // ---------- logos (inline, strip @import; fonts come from <link>) ----------
@@ -137,6 +140,9 @@ a{color:inherit;text-decoration:none}
 .ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(11,42,60,.05) 0 2px,transparent 2px 18px)}
 .ph .ph-l{position:relative;margin-bottom:34px;font:700 15px/1.3 'Manrope';letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;background:rgba(251,247,239,.82);color:var(--peacock-700);text-align:center}
 .arch{border-radius:999px 999px 18px 18px}
+.photo{position:absolute;overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo .fade{position:absolute;inset:0}
 `;
 fs.rmSync(path.join(OUT, 'assets'), { recursive: true, force: true });
 
@@ -156,14 +162,18 @@ emit('01-brand-intro.html', { title: 'Brand intro', fmt: 'Instagram post', w: 10
 .c1-hi{margin-top:40px;font-size:58px;line-height:1.3;color:var(--gold-300)}
 .c1-sub{margin-top:26px;font:500 25px/1.45 'Manrope';color:rgba(251,247,239,.78);max-width:470px}
 .c1-arch{position:absolute;right:58px;top:196px;width:390px;height:640px;border:1.5px solid rgba(201,162,75,.55);border-radius:999px 999px 0 0;border-bottom:0}
+.c1-photo{right:58px;top:196px;width:390px;height:640px;border-radius:999px 999px 0 0}
+.c1-photo img{object-position:37% 50%;filter:saturate(.92) contrast(1.04)}
+.c1-photo .fade{background:linear-gradient(180deg,rgba(11,42,60,.10) 0%,rgba(11,42,60,0) 30%,rgba(11,42,60,0) 55%,rgba(11,42,60,.85) 88%,#0B2A3C 100%),linear-gradient(90deg,rgba(11,42,60,.35),rgba(11,42,60,0) 40%)}
 .c1-arch2{position:absolute;right:76px;top:214px;width:354px;height:640px;border:1px solid rgba(201,162,75,.22);border-radius:999px 999px 0 0;border-bottom:0}
 `,
   body: `<div class="layer c1-bg"></div>
 <div class="layer"><svg viewBox="0 0 1080 1080">${barbField({ w: 1080, h: 1080, n: 34, op: 0.06, curve: 160 })}</svg></div>
+<div class="photo c1-photo"><img src="../assets/img/family-dark.jpg" alt="Mother gazing at her sleeping newborn"><div class="fade"></div></div>
 <div class="c1-arch2"></div><div class="c1-arch"></div>
 <div class="layer"><svg viewBox="0 0 1080 1080">
 <defs><linearGradient id="v1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E4D64"/><stop offset="1" stop-color="#1A8C8C"/></linearGradient></defs>
-${place(feather({ stroke: '#C9A24B', sw: 1.15, barbs: 52, eye: 'solid', vane: 'url(#v1)', rachis: '#E6CF8F', eyeCols: ['#C9A24B', '#2BA3A0', '#0B2A3C'] }), { x: 830, y: 600, rot: 14, s: 1.18 })}
+${place(feather({ stroke: '#C9A24B', sw: 1.4, barbs: 40, eye: 'solid', vane: 'url(#v1)', rachis: '#E6CF8F', eyeCols: ['#C9A24B', '#2BA3A0', '#0B2A3C'] }), { x: 655, y: 800, rot: -22, s: 0.42 })}
 </svg></div>
 <div class="c1-logo">${LOGO_REV}</div>
 <div class="eyebrow c1-est">Est. 2018</div>
@@ -184,7 +194,9 @@ emit('02-maternity-care.html', { title: 'Maternity care', fmt: 'Instagram post',
 .c2-eb{position:absolute;left:var(--pad);top:262px;color:var(--teal-500)}
 .c2-h{position:absolute;left:var(--pad);top:304px;width:560px;font-size:84px;line-height:1.02}
 .c2-h em{color:var(--teal-500)}
-.c2-ph{right:var(--pad);top:80px;width:330px;height:560px;background:linear-gradient(170deg,#F8E1DC 0%,#F4C9C5 60%,#EFB9B5 100%)}
+.c2-ph{right:var(--pad);top:80px;width:330px;height:560px;border-radius:999px 999px 18px 18px}
+.c2-ph img{object-position:50% 35%}
+.c2-ph .fade{background:linear-gradient(180deg,rgba(251,247,239,0) 70%,rgba(242,184,181,.35) 100%)}
 .c2-ph-ring{position:absolute;right:calc(var(--pad) - 14px);top:66px;width:358px;height:588px;border:1px solid var(--gold-500);border-radius:999px 999px 26px 26px}
 .c2-list{position:absolute;left:var(--pad);right:var(--pad);top:704px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--gold-500)}
 .c2-list div{padding:26px 22px 0 0}
@@ -194,7 +206,7 @@ emit('02-maternity-care.html', { title: 'Maternity care', fmt: 'Instagram post',
 `,
   body: `<div class="layer"><svg viewBox="0 0 1080 1080">${barbField({ w: 1080, h: 1080, n: 30, stroke: '#1A8C8C', op: 0.05, curve: 140 })}</svg></div>
 <div class="c2-ph-ring"></div>
-<div class="ph arch c2-ph"><svg viewBox="0 0 400 260" style="position:absolute;left:40px;right:40px;top:210px;width:250px;opacity:.55">${LOTUS('#FBF7EF', 2.4)}</svg><span class="ph-l">Photo placeholder<br>Mother &amp; newborn</span></div>
+<div class="photo c2-ph"><img src="${P02 || '../assets/img/family-light.jpg'}" alt="${P02 ? 'Pregnant woman at a check-up with her doctor' : 'Mother in a teal sari holding her baby'}"><div class="fade"></div></div>
 <div class="c2-logo">${LOGO}</div>
 <div class="eyebrow c2-eb">Maternity &amp; Obstetrics</div>
 <h1 class="serif c2-h">Every step of motherhood, <em>held with care.</em></h1>
@@ -218,12 +230,15 @@ emit('03-trust-rating.html', { title: 'Trust · 4.8★ rating', fmt: 'Instagram 
 .c3-q{position:absolute;left:var(--pad);right:150px;top:600px;border-top:1px solid rgba(201,162,75,.5);padding-top:40px}
 .c3-q blockquote{font-size:50px;line-height:1.18;color:var(--cream-50)}
 .c3-q blockquote::before{content:"“";position:absolute;left:-6px;top:6px;font:400 110px/1 'Fraunces';color:var(--gold-500);transform:translateY(-48px);opacity:.0}
+.c3-photo{left:724px;top:176px;width:272px;height:384px;border-radius:999px 999px 16px 16px}
+.c3-photo .fade{background:linear-gradient(180deg,rgba(11,42,60,0) 60%,rgba(11,42,60,.45) 100%)}
+.c3-ring{position:absolute;left:710px;top:162px;width:300px;height:412px;border:1px solid rgba(201,162,75,.6);border-radius:999px 999px 24px 24px}
 .c3-q p{margin-top:24px;font:600 18px/1 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:var(--gold-300);opacity:.8}
 `,
   body: `<div class="layer c3-bg"></div>
-<div class="layer"><svg viewBox="0 0 1080 1080">
+${P03 ? `<div class="c3-ring"></div><div class="photo c3-photo"><img src="${P03}" alt="Doctor in conversation with a patient"><div class="fade"></div></div>` : `<div class="layer"><svg viewBox="0 0 1080 1080">
 ${place(feather({ stroke: '#C9A24B', sw: 1.1, barbs: 50, eye: 'line', op: 0.28 }), { x: 975, y: 430, rot: -18, s: 1.1 })}
-</svg></div>
+</svg></div>`}
 <div class="c3-logo">${LOGO_REV}</div>
 <div class="eyebrow c3-eb">What families say</div>
 <div class="c3-score"><div class="serif c3-num">4.8</div>
@@ -239,7 +254,10 @@ emit('04-fertility-ivf.html', { title: 'Fertility & IVF', fmt: 'Instagram portra
 .c4-bg{background:linear-gradient(180deg,#FBF7EF 0%,#F8E9E2 58%,#F5DCD5 100%)}
 .c4-logo{position:absolute;left:50%;top:84px;width:250px;transform:translateX(-50%)}
 .c4-arch{position:absolute;left:50%;top:250px;width:440px;height:470px;transform:translateX(-50%);border-radius:999px 999px 0 0;background:radial-gradient(80% 70% at 50% 75%, rgba(242,184,181,.75) 0%, rgba(242,184,181,.0) 70%), linear-gradient(180deg,rgba(243,234,218,.0),rgba(243,234,218,.9));border:1.5px solid var(--gold-500);border-bottom:0}
-.c4-lotus{position:absolute;left:50%;top:430px;width:400px;transform:translateX(-50%)}
+.c4-photo{left:50%;top:250px;width:440px;height:470px;transform:translateX(-50%);border-radius:999px 999px 0 0}
+.c4-photo img{object-position:50% 18%}
+.c4-photo .fade{background:linear-gradient(180deg,rgba(248,233,226,0) 55%,rgba(247,228,221,.92) 100%),radial-gradient(90% 60% at 50% 0%,rgba(242,184,181,.18),rgba(242,184,181,0))}
+.c4-arch{background:none!important;z-index:2}
 .c4-base{position:absolute;left:250px;right:250px;top:720px;height:1px;background:var(--gold-500)}
 .c4-copy{position:absolute;left:var(--pad);right:var(--pad);top:800px;text-align:center}
 .c4-eb{color:var(--teal-500)}
@@ -254,8 +272,8 @@ emit('04-fertility-ivf.html', { title: 'Fertility & IVF', fmt: 'Instagram portra
   body: `<div class="layer c4-bg"></div>
 <div class="layer"><svg viewBox="0 0 1080 1350">${barbField({ w: 1080, h: 1350, n: 36, stroke: '#C9A24B', op: 0.08, curve: 180 })}</svg></div>
 <div class="c4-logo">${LOGO}</div>
+<div class="photo c4-photo"><img src="${P04 || '../assets/img/doctor-3.jpg'}" alt="${P04 ? 'Hopeful parents-to-be' : 'Fertility consultant (stock model)'}"><div class="fade"></div></div>
 <div class="c4-arch"></div><div class="c4-base"></div>
-<svg class="c4-lotus" viewBox="0 0 400 260">${LOTUS('#0E4D64', 2)}<circle cx="200" cy="12" r="4" fill="#C9A24B"/></svg>
 <div class="c4-copy"><div class="eyebrow c4-eb">Fertility &amp; IVF</div>
 <h1 class="serif c4-h">Hope, <em>held gently.</em></h1>
 <p class="c4-sub">Patient, unhurried guidance for every step of your fertility journey.</p></div>
@@ -284,11 +302,15 @@ emit('05-emergency-story.html', { title: '24×7 Emergency', fmt: 'Story / Reel c
 .c5-map svg{display:block;width:100%;margin-top:22px}
 .c5-cta{position:absolute;left:var(--pad);right:var(--pad);top:1532px;height:112px;border-radius:999px;background:var(--gold-500);color:var(--peacock-900);display:flex;align-items:center;justify-content:center;gap:22px;font:800 44px/1 'Manrope';letter-spacing:.01em}
 .c5-cta .ic{width:46px;height:46px}
+.c5-photo{left:0;top:0;width:1080px;height:1180px}
+.c5-photo img{filter:saturate(.85)}
+.c5-photo .fade{background:linear-gradient(180deg,rgba(11,42,60,.82) 0%,rgba(11,42,60,.45) 22%,rgba(11,42,60,.55) 42%,rgba(11,42,60,.9) 68%,#0B2A3C 100%),linear-gradient(90deg,rgba(11,42,60,.55),rgba(11,42,60,0) 70%)}
 .c5-hint{position:absolute;left:0;right:0;top:1674px;text-align:center;font:600 20px/1 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:rgba(251,247,239,.8)}
 `,
   body: `<div class="layer c5-bg"></div>
+${P05 ? `<div class="photo c5-photo"><img src="${P05}" alt="Nurse caring for a patient"><div class="fade"></div></div>` : ''}
 <div class="layer"><svg viewBox="0 0 1080 1920">${barbField({ w: 1080, h: 1920, n: 44, op: 0.06, curve: 200 })}
-${place(feather({ stroke: '#C9A24B', sw: 1.1, barbs: 50, eye: 'line', op: 0.22 }), { x: 900, y: 700, rot: 20, s: 1.35 })}</svg></div>
+${P05 ? '' : place(feather({ stroke: '#C9A24B', sw: 1.1, barbs: 50, eye: 'line', op: 0.22 }), { x: 900, y: 700, rot: 20, s: 1.35 })}</svg></div>
 <div class="c5-logo">${LOGO_REV}</div>
 <div class="eyebrow c5-live"><i></i>Always open</div>
 <div class="c5-big"><div class="serif c5-num">24<span>×</span>7</div><div class="serif c5-word"><em>Emergency</em></div>
@@ -315,10 +337,11 @@ emit('06-meta-ad-checkup.html', { title: 'Meta ad · Check-up', fmt: 'Meta feed 
   extraCss: `
 .c6-bg{background:linear-gradient(180deg,var(--cream-50) 0%,var(--cream-100) 100%)}
 .c6-logo{position:absolute;left:var(--pad);top:80px;width:250px}
-.c6-ph{left:560px;top:0;right:0;bottom:0;border-radius:0;background:linear-gradient(160deg,#CFE3E0 0%,#9CCAC6 50%,#6FB0AD 100%)}
-.c6-ph::after{content:"";position:absolute;left:0;top:0;bottom:0;width:180px;background:linear-gradient(90deg,var(--cream-50),rgba(251,247,239,0))}
-.c6-archmask{position:absolute;left:610px;top:230px;width:380px;height:850px;border:1.5px solid rgba(251,247,239,.9);border-radius:999px 999px 0 0;border-bottom:0}
-.c6-badge{position:absolute;right:70px;top:80px;background:var(--cream-50);border-radius:20px;padding:18px 24px;box-shadow:0 14px 40px rgba(11,42,60,.16);display:flex;align-items:center;gap:16px}
+.c6-ph{left:664px;top:150px;width:350px;bottom:0;border-radius:999px 999px 0 0;background:#F3E6D8}
+.c6-ph img{object-position:50% 0%}
+.c6-ph .fade{background:linear-gradient(180deg,rgba(243,234,218,0) 72%,rgba(243,234,218,.85) 100%)}
+.c6-archmask{position:absolute;left:650px;top:136px;width:378px;height:944px;border:1.5px solid var(--gold-500);border-radius:999px 999px 0 0;border-bottom:0}
+.c6-badge{position:absolute;right:56px;bottom:72px;background:var(--cream-50);border-radius:20px;padding:18px 24px;box-shadow:0 14px 40px rgba(11,42,60,.16);display:flex;align-items:center;gap:16px}
 .c6-badge b{font:400 54px/1 'Fraunces';color:var(--peacock-900)}
 .c6-badge span{font:600 18px/1.3 'Manrope';color:var(--ink-700)}
 .c6-badge .st{color:var(--gold-500);font-size:22px}
@@ -337,9 +360,8 @@ emit('06-meta-ad-checkup.html', { title: 'Meta ad · Check-up', fmt: 'Meta feed 
 .c6-feather{position:absolute;inset:0;pointer-events:none}
 `,
   body: `<div class="layer c6-bg"></div>
-<div class="ph c6-ph"><span class="ph-l" style="position:absolute;top:400px;left:50%;transform:translateX(-50%);margin:0;white-space:nowrap">Photo placeholder<br>Expecting mother, check-up</span></div>
+<div class="photo c6-ph"><img src="${P06 || '../assets/img/doctor-rohita.jpg'}" alt="${P06 ? 'Doctor examining a pregnant woman' : 'Gynaecologist (stock model)'}"><div class="fade"></div></div>
 <div class="c6-archmask"></div>
-<div class="layer"><svg viewBox="0 0 1080 1080">${place(feather({ stroke: '#FBF7EF', sw: 1.2, barbs: 46, eye: 'line', op: 0.55 }), { x: 930, y: 800, rot: 12, s: 0.82 })}</svg></div>
 <div class="c6-badge"><b>4.8</b><span><span class="st">${STAR}</span> 500+ ratings<br>on Justdial</span></div>
 <div class="c6-logo">${LOGO}</div>
 <div class="c6-copy"><div class="eyebrow c6-eb">Dwarka Mor · New Delhi</div>
@@ -406,7 +428,7 @@ const cards = files.map((f, i) => {
 <figcaption><span class="n">${String(i + 1).padStart(2, '0')}</span><span class="t"><b>${f.title}</b><small>${f.fmt} · ${f.w}×${f.h} · ${f.theme}</small></span>
 <span class="links"><a href="${f.file}">HTML</a><a href="png/${f.file.replace('.html', '.png')}">PNG</a></span></figcaption></figure>`;
 }).join('\n');
-fs.writeFileSync(path.join(OUT, 'index.html'), `<!doctype html>
+if (process.env.WRITE_INDEX) fs.writeFileSync(path.join(OUT, 'index.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Social &amp; Ads · Gokul Hospital</title>
 <link rel="stylesheet" href="${FONTS}">
