@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Fertility & IVF · Gokul Hospital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..800,0..100;1,9..144,300..800,0..100&family=Manrope:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap">
+<style>:root{
+--peacock-900:#0B2A3C;--peacock-700:#0E4D64;--teal-500:#1A8C8C;--feather-green:#3E8E5A;
+--gold-500:#C9A24B;--gold-300:#E6CF8F;--lotus-300:#F2B8B5;--cream-50:#FBF7EF;--cream-100:#F3EADA;--ink-700:#3A3A3A;
+--pad:84px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#1b1f22}
+body{min-height:100vh}
+a{color:inherit;text-decoration:none}
+.art{position:relative;overflow:hidden;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.dark{background:var(--peacock-900);color:var(--cream-50)}
+.light{background:var(--cream-50);color:var(--peacock-900)}
+.art svg.logo{display:block;height:auto}
+.logo .gk{font-family:'Fraunces',Georgia,serif;font-weight:560;font-variation-settings:'SOFT' 50,'opsz' 144}
+.logo .hs{font-family:'Manrope',Arial,sans-serif;font-weight:600}
+.layer{position:absolute;inset:0;pointer-events:none}
+.layer svg{width:100%;height:100%;display:block}
+.serif{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'opsz' 144;font-weight:400;letter-spacing:-.02em}
+.serif em{font-style:italic;font-variation-settings:'SOFT' 100,'opsz' 144}
+.hi{font-family:'Tiro Devanagari Hindi','Noto Serif Devanagari',serif;letter-spacing:0}
+.eyebrow{font:700 21px/1.2 'Manrope',sans-serif;letter-spacing:.24em;text-transform:uppercase}
+.rule{height:1px;background:var(--gold-500)}
+.ic{width:1em;height:1em;flex:none}
+.st{width:1em;height:1em;display:inline-block}
+/* footer */
+.foot{position:absolute;left:var(--pad);right:var(--pad);bottom:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.cta-chip{display:inline-flex;align-items:center;gap:20px;padding:16px 34px 16px 22px;border-radius:999px;font-size:52px}
+.cta-chip .ic{width:56px;height:56px;padding:12px;border-radius:50%;}
+.cta-chip span{display:flex;flex-direction:column;gap:4px}
+.cta-chip small{font:700 16px/1 'Manrope';letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+.cta-chip b{font:700 34px/1.05 'Manrope';letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.foot-r{font:600 20px/1.3 'Manrope';letter-spacing:.18em;text-transform:uppercase;opacity:.85;text-align:right}
+.dark .cta-chip{background:rgba(251,247,239,.07);border:1px solid rgba(230,207,143,.45);color:var(--cream-50)}
+.dark .cta-chip .ic{background:var(--gold-500);color:var(--peacock-900)}
+.light .cta-chip{background:var(--peacock-900);color:var(--cream-50)}
+.light .cta-chip .ic{background:var(--gold-500);color:var(--peacock-900)}
+/* photo placeholder */
+.ph{position:absolute;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(11,42,60,.05) 0 2px,transparent 2px 18px)}
+.ph .ph-l{position:relative;margin-bottom:34px;font:700 15px/1.3 'Manrope';letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;background:rgba(251,247,239,.82);color:var(--peacock-700);text-align:center}
+.arch{border-radius:999px 999px 18px 18px}
+
+/* creative-specific */
+.c4-bg{background:linear-gradient(180deg,#FBF7EF 0%,#F8E9E2 58%,#F5DCD5 100%)}
+.c4-logo{position:absolute;left:50%;top:84px;width:250px;transform:translateX(-50%)}
+.c4-arch{position:absolute;left:50%;top:250px;width:440px;height:470px;transform:translateX(-50%);border-radius:999px 999px 0 0;background:radial-gradient(80% 70% at 50% 75%, rgba(242,184,181,.75) 0%, rgba(242,184,181,.0) 70%), linear-gradient(180deg,rgba(243,234,218,.0),rgba(243,234,218,.9));border:1.5px solid var(--gold-500);border-bottom:0}
+.c4-lotus{position:absolute;left:50%;top:430px;width:400px;transform:translateX(-50%)}
+.c4-base{position:absolute;left:250px;right:250px;top:720px;height:1px;background:var(--gold-500)}
+.c4-copy{position:absolute;left:var(--pad);right:var(--pad);top:800px;text-align:center}
+.c4-eb{color:var(--teal-500)}
+.c4-h{margin-top:22px;font-size:112px;line-height:1}
+.c4-h em{color:var(--peacock-700)}
+.c4-sub{margin:30px auto 0;max-width:700px;font:500 31px/1.45 'Manrope';color:var(--ink-700)}
+.c4 .foot{justify-content:center}
+.c4 .foot-r{display:none}
+.c4 .cta-chip{background:transparent;color:var(--peacock-900);border:1.5px solid var(--peacock-900)}
+.c4 .cta-chip .ic{background:var(--peacock-900);color:var(--gold-300)}
+</style>
+</head><body>
+<!-- Artboard: 1080×1350px. Open with ?fit to scale it to the window. -->
+<main class="art pt light c4" style="width:1080px;height:1350px">
+<div class="layer c4-bg"></div>
+<div class="layer"><svg viewBox="0 0 1080 1350"><path d="M0 -180Q540 -360 1080 -180M0 -131.14Q540 -311.14 1080 -131.14M0 -82.29Q540 -262.29 1080 -82.29M0 -33.43Q540 -213.43 1080 -33.43M0 15.43Q540 -164.57 1080 15.43M0 64.29Q540 -115.71 1080 64.29M0 113.14Q540 -66.86 1080 113.14M0 162Q540 -18 1080 162M0 210.86Q540 30.86 1080 210.86M0 259.71Q540 79.71 1080 259.71M0 308.57Q540 128.57 1080 308.57M0 357.43Q540 177.43 1080 357.43M0 406.29Q540 226.29 1080 406.29M0 455.14Q540 275.14 1080 455.14M0 504Q540 324 1080 504M0 552.86Q540 372.86 1080 552.86M0 601.71Q540 421.71 1080 601.71M0 650.57Q540 470.57 1080 650.57M0 699.43Q540 519.43 1080 699.43M0 748.29Q540 568.29 1080 748.29M0 797.14Q540 617.14 1080 797.14M0 846Q540 666 1080 846M0 894.86Q540 714.86 1080 894.86M0 943.71Q540 763.71 1080 943.71M0 992.57Q540 812.57 1080 992.57M0 1041.43Q540 861.43 1080 1041.43M0 1090.29Q540 910.29 1080 1090.29M0 1139.14Q540 959.14 1080 1139.14M0 1188Q540 1008 1080 1188M0 1236.86Q540 1056.86 1080 1236.86M0 1285.71Q540 1105.71 1080 1285.71M0 1334.57Q540 1154.57 1080 1334.57M0 1383.43Q540 1203.43 1080 1383.43M0 1432.29Q540 1252.29 1080 1432.29M0 1481.14Q540 1301.14 1080 1481.14M0 1530Q540 1350 1080 1530" fill="none" stroke="#C9A24B" stroke-width="1.2" opacity="0.08"/></svg></div>
+<div class="c4-logo"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 116" role="img" aria-label="Gokul Hospital"><style><![CDATA[.gk{font-family:'Fraunces','Cormorant Garamond',Georgia,serif;font-weight:560;font-variation-settings:'SOFT' 50,'opsz' 144;}
+.hs{font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-weight:600;}
+.hi{font-family:'Tiro Devanagari Hindi','Noto Serif Devanagari',serif;}]]></style><g transform="translate(-16 9) scale(1.07)"><g transform="translate(50 50) rotate(16) scale(0.92) translate(-50 -51.5)"><defs><linearGradient id="gp-g" x1="0" y1="4" x2="0" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0E4D64"/><stop offset=".55" stop-color="#1A8C8C"/><stop offset="1" stop-color="#1A8C8C"/></linearGradient><mask id="gp-m" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/></mask></defs><path d="M49.05 56L50.95 56L50.42 97.6Q50 99 49.58 97.6Z" fill="#0B2A3C"/><path d="M50 64.33Q39.25 55.52 28.5 51M50 64.33Q60.75 55.52 71.5 51M50 67.45Q40.45 59.61 30.89 55.6M50 67.45Q59.55 59.61 69.11 55.6M50 70.56Q41.64 63.71 33.28 60.2M50 70.56Q58.36 63.71 66.72 60.2M50 73.68Q42.84 67.81 35.68 64.8M50 73.68Q57.16 67.81 64.32 64.8M50 76.8Q44.03 71.91 38.07 69.4M50 76.8Q55.97 71.91 61.93 69.4M50 79.91Q45.23 76 40.46 74M50 79.91Q54.77 76 59.54 74M50 83.03Q46.43 80.1 42.85 78.6M50 83.03Q53.57 80.1 57.15 78.6M50 86.15Q47.62 84.2 45.24 83.2M50 86.15Q52.38 84.2 54.76 83.2M50 89.27Q48.82 88.3 47.64 87.8M50 89.27Q51.18 88.3 52.36 87.8" fill="none" stroke="url(#gp-g)" stroke-width="0.95" stroke-linecap="round"/><path d="M50 3C62.6 3 72 14 72 30C72 46 62.4 59.6 50 66C37.6 59.6 28 46 28 30C28 14 37.4 3 50 3Z" fill="url(#gp-g)" mask="url(#gp-m)"/><ellipse cx="50" cy="28.6" rx="14.6" ry="18" fill="#C9A24B"/><ellipse cx="50" cy="29.9" rx="11.5" ry="14.6" fill="#1A8C8C"/><ellipse cx="50" cy="31.7" rx="7" ry="9.5" fill="#0B2A3C"/></g></g><text class="gk" x="88" y="66" font-size="62" textLength="236" lengthAdjust="spacingAndGlyphs" fill="#0B2A3C">GOKUL</text><rect x="89" y="80" width="234" height="1" fill="#C9A24B"/><text class="hs" x="89.5" y="103" font-size="13.5" textLength="233" lengthAdjust="spacing" fill="#0E4D64">HOSPITAL</text></svg>
+</div>
+<div class="c4-arch"></div><div class="c4-base"></div>
+<svg class="c4-lotus" viewBox="0 0 400 260"><g fill="none" stroke="#0E4D64" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<path d="M200 22C242 72 242 150 200 202C158 150 158 72 200 22Z"/>
+<path d="M200 202C150 192 108 142 104 80C150 94 186 140 200 202Z"/>
+<path d="M200 202C250 192 292 142 296 80C250 94 214 140 200 202Z"/>
+<path d="M200 206C130 212 60 182 28 132C90 120 162 150 200 206Z"/>
+<path d="M200 206C270 212 340 182 372 132C310 120 238 150 200 206Z"/>
+<path d="M60 230Q200 252 340 230" /><path d="M110 246Q200 258 290 246" opacity=".6"/></g><circle cx="200" cy="12" r="4" fill="#C9A24B"/></svg>
+<div class="c4-copy"><div class="eyebrow c4-eb">Fertility &amp; IVF</div>
+<h1 class="serif c4-h">Hope, <em>held gently.</em></h1>
+<p class="c4-sub">Patient, unhurried guidance for every step of your fertility journey.</p></div>
+<footer class="foot">
+  <a class="cta-chip" href="tel:+919718934517"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9.2 8.3c.2-.4.6-.5.9-.3l.9 1.6c.1.3 0 .6-.2.8l-.5.5c.5 1.1 1.4 2 2.6 2.6l.5-.5c.2-.2.5-.3.8-.2l1.6.9c.3.2.4.6.2.9-.5.9-1.4 1.4-2.4 1.1-2.4-.7-4.4-2.7-5.1-5.1-.3-.9.2-1.8.7-2.3z" fill="currentColor" stroke="none"/></svg><span><small>Talk to us on WhatsApp</small><b>+91 97189 34517</b></span></a>
+  <span class="foot-r">Dwarka Mor · New Delhi</span></footer>
+</main>
+<script>if(location.search.includes('fit')){const a=document.querySelector('.art');const f=()=>{const s=Math.min(innerWidth/1080,innerHeight/1350);a.style.transformOrigin='0 0';a.style.transform='scale('+s+')';document.body.style.overflow='hidden'};f();addEventListener('resize',f)}</script>
+</body></html>
